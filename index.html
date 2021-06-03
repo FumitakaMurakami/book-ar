@@ -1,7 +1,7 @@
 <head>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 </head>
 
 <style>
@@ -55,18 +55,12 @@
       smoothThreshold="5"
       registerevents
     >
-      
-    <a-scene>
-        <a-assets>
-          <video id="mv" autoplay loop="true" src="video/sample.mp4"></video>
-        </a-assets>
-      
-        <a-video src="#mv" width="16" height="9" position="0 0 -20"></a-video>
-      </a-scene>
-      </a-entity>
+      <a-assets>
+        <video id="mv" autoplay loop="true" src="video/sample.mp4"></video>
+      </a-assets>
+
+      <a-video src="#mv" width="16" height="9" position="0 0 -20"></a-video>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
-
-
