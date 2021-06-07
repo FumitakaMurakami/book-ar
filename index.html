@@ -10,18 +10,22 @@
       let marker = this.el;
       const playmv = function () {
         const v = document.querySelector("#mv");
+        v.setAttribute("material", "src", "#music_on");
         v.play();
       };
-
+      const stopmv = function () {
+        const v = document.querySelector("#mv");
+        v.pause();
+      };
       // マーカーを検出したイベントの登録
       marker.addEventListener("markerFound", function () {
         playmv();
       });
 
       // マーカーを見失ったイベントの登録
-      /* marker.addEventListener("markerLost", function () {
-        
-      }); */
+      marker.addEventListener("markerLost", function () {
+        stopmv();
+      });
     },
   });
 </script>
