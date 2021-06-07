@@ -3,7 +3,7 @@
   <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", function (event) {
       var scene = document.querySelector("a-scene");
       var video = document.getElementById("mv");
@@ -30,7 +30,7 @@
         });
       },
     });
-  </script>
+  </script> -->
 </head>
 
 <body style="margin: 0px; overflow: hidden">
@@ -41,7 +41,7 @@
     arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
   >
     <a-assets>
-      <video id="mv" autoplay loop="true" src="video/sample.mp4"></video>
+      <video id="mv" autoplay muted loop="true" src="video/sample.mp4"></video>
     </a-assets>
     <a-nft
       type="nft"
@@ -61,7 +61,7 @@
         playsinline
         loop="true"
       ></a-video>
-      <a-entity
+      <!-- <a-entity
         id="playButton"
         geometry="primitive: box;"
         material="color: red src: #play"
@@ -76,7 +76,7 @@
         material="src: #stop"
         position="-7.3 -1.2 -0.67"
         rotation="0 90 0"
-      ></a-entity>
+      ></a-entity> -->
     </a-nft>
     <a-nft
       type="nft"
