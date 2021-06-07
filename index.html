@@ -26,7 +26,7 @@
     AFRAME.registerComponent("click-stop", {
       init: function () {
         this.el.addEventListener("click", function (event) {
-          document.getElementById("bird").pause();
+          document.getElementById("mv").pause();
         });
       },
     });
@@ -103,6 +103,11 @@
         loop="true"
       ></a-video>
     </a-nft>
-    <a-entity camera></a-entity>
+    <a-entity camera
+      ><a-entity
+        cursor="rayOrigin: mouse; fuse:false"
+        material="color: black; shader: flat"
+      ></a-entity>
+    </a-entity>
   </a-scene>
 </body>
