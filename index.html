@@ -11,9 +11,9 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
   >
-  <a-assets>
-    <video id="mv" autoplay loop="true" src="video/sample.mp4"></video>
-  </a-assets>
+    <a-assets>
+      <video id="mv" autoplay loop="true" src="video/sample.mp4"></video>
+    </a-assets>
     <a-nft
       type="nft"
       url="https://fumitakamurakami.github.io/book-ar/book"
@@ -23,9 +23,13 @@
       smoothThreshold="5"
       registerevents
     >
-    <a-video src="#mv" width="200" height="150" position="0 0 0" rotation="0 0 10"></a-video>
-
-      
+      <a-video
+        src="#mv"
+        width="200"
+        height="150"
+        position="0 0 0"
+        rotation="0 0 10"
+      ></a-video>
     </a-nft>
     <a-nft
       type="nft"
@@ -41,8 +45,13 @@
         material="color: red"
         scale="100 100 100"
       > -->
-      <a-video src="#mv" width="200" height="150" position="0 0 0" rotation="0 0 10"></a-video>
-      </a-entity>
+      <a-video
+        src="#mv"
+        width="200"
+        height="150"
+        position="0 0 0"
+        rotation="0 0 10"
+      ></a-video>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
