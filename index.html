@@ -29,16 +29,27 @@
   });
   function buttonevent() {
     const v = document.querySelector("#mv");
-    v.setAttribute("material", "src", "#music_on");
+    /* v.setAttribute("material", "src", "#music_on"); */
     v.muted = true; // ミュート有効
     v.play(); // 動画再生
-    v.pause(); // 動画停止
     v.muted = false; // ミュート無効
     v.currentTime = 0; // 開始秒数を戻す
   }
 </script>
 <style>
   .buttons {
+    color: white;
+    position: absolute;
+    height: 80px;
+    width: 120px;
+    z-index: -9999;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+  }
+  .load-buttons {
     color: white;
     position: absolute;
     height: 80px;
@@ -54,7 +65,7 @@
 <body style="margin: 0px; overflow: hidden">
   <div class="loader" id="info">
     <button class="buttons" type="button" id="button1" onclick="buttonevent()">
-      音声ON
+      ミュート解除で再生
     </button>
   </div>
   <a-scene
