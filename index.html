@@ -28,8 +28,31 @@
       });
     },
   });
+  function buttonevent() {
+    const v = document.querySelector("#mv");
+    v.setAttribute("material", "src", "#music_on");
+  }
 </script>
+<style>
+  .buttons {
+    color: white;
+    position: absolute;
+    height: 80px;
+    width: 120px;
+    z-index: 9999;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+  }
+</style>
 <body style="margin: 0px; overflow: hidden">
+  <div class="loader" id="info">
+    <button class="buttons" type="button" id="button1" onclick="buttonevent()">
+      音声ON
+    </button>
+  </div>
   <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
@@ -74,12 +97,6 @@
       smoothThreshold="5"
       registerevents
     >
-      <!-- <a-entity
-        id="redbox"
-        geometry="primitive: box"
-        material="color: red"
-        scale="100 100 100"
-      > -->
       <a-video
         src="#mv"
         width="300"
@@ -98,15 +115,4 @@
       ></a-entity>
     </a-entity>
   </a-scene>
-  <!-- <script>
-    window.addEventListener("click", function () {
-      const v = document.querySelector("#mv");
-      v.play();
-    });
-    const playmv = function () {
-      const v = document.querySelector("#mv");
-      v.play();
-    };
-    window.onload(playmv);
-  </script> -->
 </body>
