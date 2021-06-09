@@ -31,6 +31,11 @@
   function buttonevent() {
     const v = document.querySelector("#mv");
     v.setAttribute("material", "src", "#music_on");
+    v.muted = true; // ミュート有効
+    v.play(); // 動画再生
+    v.pause(); // 動画停止
+    v.muted = false; // ミュート無効
+    v.currentTime = 0; // 開始秒数を戻す
   }
 </script>
 <style>
