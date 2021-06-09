@@ -19,11 +19,17 @@
       // マーカーを検出したイベントの登録
       marker.addEventListener("markerFound", function () {
         playmv();
+        const b1 = document.getElementById("button1");
+        b1.classList.remove("buttons");
+        b1.classList.toggle("load-buttons");
       });
 
       // マーカーを見失ったイベントの登録
       marker.addEventListener("markerLost", function () {
         stopmv();
+        const b1 = document.getElementById("button1");
+        b1.classList.remove("after-buttons");
+        b1.classList.toggle("load-buttons");
       });
     },
   });
